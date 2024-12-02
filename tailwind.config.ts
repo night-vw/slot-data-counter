@@ -6,6 +6,12 @@ const config: Config = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  safelist: [
+    "bg-red-500", // 必要なクラスを追加
+    "text-center", // 動的生成される可能性があるクラスを明示
+    "bg-blue-500",
+    "text-white",
+  ],
   theme: {
     extend: {
       backgroundImage: {
@@ -17,4 +23,5 @@ const config: Config = {
   },
   plugins: [],
 };
+
 export default config;
